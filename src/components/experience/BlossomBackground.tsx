@@ -161,7 +161,7 @@ export function BlossomBackground({ onReady }: { onReady?: (ready: boolean) => v
         drawIndex = found >= 0 ? found : drawIndex;
       }
       if (drawIndex !== currentDrawnIndex && images[drawIndex]) {
-        const img = images[drawIndex];
+        const img = images[drawIndex]!;
         const canvasRatio = window.innerWidth / window.innerHeight;
         const imgRatio = img.width / img.height;
         let drawWidth, drawHeight, offsetX, offsetY;
