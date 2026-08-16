@@ -253,7 +253,10 @@ export function BlossomBackground({ onReady }: { onReady?: (ready: boolean) => v
     <>
       <div className="fixed inset-0 -z-10 bg-background">
         <canvas ref={canvasRef} style={{ width: "100%", height: "100%", display: "block" }} />
-        <div className="pointer-events-none absolute inset-0 bg-[var(--veil-dream)]" />
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{ background: "var(--veil-dream)" }}
+        />
         <div className="grain pointer-events-none absolute inset-0" />
       </div>
       <div ref={petalRef} className="pointer-events-none fixed inset-0 z-30 overflow-hidden" />
